@@ -6,18 +6,23 @@
 //
 
 import UIKit
+import os.log
 
 class MealViewController: UIViewController, UITextFieldDelegate , UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     //MARK: Properties
-    @IBOutlet weak var nameTextField: UITextField!
+   
+    @IBOutlet weak var namTextField: UITextField!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var ratingControl: RatingControl!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    var meal: Meal?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameTextField.delegate = self
+        namTextField.delegate = self
     }
 
     //MARK: UITextFieldDelegate
@@ -28,7 +33,7 @@ class MealViewController: UIViewController, UITextFieldDelegate , UIImagePickerC
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-       
+   
     }
     
     //MARK: UIImagePickerControllerDelegate
@@ -49,7 +54,7 @@ class MealViewController: UIViewController, UITextFieldDelegate , UIImagePickerC
     //MARK: Actions
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
         // Hide the keyboard.
-        nameTextField.resignFirstResponder()
+        namTextField.resignFirstResponder()
         
         let imagePickerController = UIImagePickerController()
         imagePickerController.sourceType = .photoLibrary
@@ -57,6 +62,22 @@ class MealViewController: UIViewController, UITextFieldDelegate , UIImagePickerC
         // Make sure ViewController is notified when the user picks an image.
         imagePickerController.delegate = self
         present(imagePickerController, animated: true, completion: nil)
+    }
+    
+    //MARK: Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        // Configure the destination view controller only when the save button is pressed.
+        guard let button = sender as? UIBarButtonItem, button === saveButton else {
+            os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
+            return
+        }
+        
+        let name = namTextField.text ?? ""
+        let photo = photoImageView.image
+        let rating = ratingControl.rating
+        meal = Meal(name: name, photo: photo, rating: rating)
     }
 }
 
