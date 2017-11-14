@@ -47,6 +47,7 @@
                                     <outlet property="nameLabel" destination="1nd-Yx-EKc" id="cfm-5L-5Xg"/>
                                     <outlet property="photoImageView" destination="1Qu-5b-Lxg" id="pW8-YQ-yah"/>
                                     <outlet property="ratingControl" destination="X5q-wA-N2n" id="dRt-mJ-34x"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="tL7-Hs-ajx"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -112,7 +113,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Meal" id="nJB-v7-Rgl">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="jJj-cw-5Ut"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="jJj-cw-5Ut">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="KW1-1H-ODq"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="Bpx-Si-aR3">
                             <connections>
                                 <segue destination="tCW-qr-bDY" kind="unwind" unwindAction="unwindToMealListWithSender:" id="j4J-SD-foG"/>
@@ -170,10 +175,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D8s-wV-Tai" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="30" y="143"/>
+            <point key="canvasLocation" x="7" y="522"/>
         </scene>
     </scenes>
     <resources>
         <image name="defaultPhoto" width="540" height="540"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="tL7-Hs-ajx"/>
+    </inferredMetricsTieBreakers>
 </document>

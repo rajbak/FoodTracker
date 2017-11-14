@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2445D9871FBAAE7700B67610 /* PropertyKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2445D9861FBAAE7700B67610 /* PropertyKey.swift */; };
 		24DDBFA31FA8397A000589ED /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DDBFA21FA8397A000589ED /* MealTableViewCell.swift */; };
 		24DDBFA51FA83DD9000589ED /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DDBFA41FA83DD9000589ED /* MealTableViewController.swift */; };
 		24DDBFA71FA83EF2000589ED /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DDBFA61FA83EF2000589ED /* Meal.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2445D9861FBAAE7700B67610 /* PropertyKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyKey.swift; sourceTree = "<group>"; };
 		24DDBFA21FA8397A000589ED /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		24DDBFA41FA83DD9000589ED /* MealTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewController.swift; sourceTree = "<group>"; };
 		24DDBFA61FA83EF2000589ED /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				24DDBFA61FA83EF2000589ED /* Meal.swift */,
 				24DDBFA21FA8397A000589ED /* MealTableViewCell.swift */,
 				24DDBFA41FA83DD9000589ED /* MealTableViewController.swift */,
+				2445D9861FBAAE7700B67610 /* PropertyKey.swift */,
 				24E2C5E41F8DCC8F00A4194D /* Main.storyboard */,
 				24E2C5E71F8DCC8F00A4194D /* Assets.xcassets */,
 				24E2C5E91F8DCC8F00A4194D /* LaunchScreen.storyboard */,
@@ -211,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24DDBFA51FA83DD9000589ED /* MealTableViewController.swift in Sources */,
+				2445D9871FBAAE7700B67610 /* PropertyKey.swift in Sources */,
 				24DDBFA31FA8397A000589ED /* MealTableViewCell.swift in Sources */,
 				24E2C5E31F8DCC8F00A4194D /* MealViewController.swift in Sources */,
 				24E2C6011F96FE8900A4194D /* RatingControl.swift in Sources */,
